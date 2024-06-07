@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  license_plate_th:
+    build: .
+    container_name: license_plate_th
+    volumes:
+      - .:/app
+    environment:
+      - ENV_VARIABLE=VALUE
+    ports:
+      - "8000:8000"
+    command: python train.py
